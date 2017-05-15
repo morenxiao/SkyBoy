@@ -10,4 +10,8 @@ struct AppConf {
   struct API {
     static let url = "http://app.sky-boy.com/test/test.json"
   }
+  
+  struct MapKit {
+    static let defaultMeters = Double(1500)
+  }
 }

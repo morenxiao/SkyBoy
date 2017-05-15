@@ -23,6 +23,7 @@
 		A8E9C8591EC9D82400DDA197 /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E9C8581EC9D82400DDA197 /* Spot.swift */; };
 		A8E9C85B1EC9D8A300DDA197 /* Subtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E9C85A1EC9D8A300DDA197 /* Subtitle.swift */; };
 		A8E9C85D1EC9E2F600DDA197 /* ChannelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E9C85C1EC9E2F600DDA197 /* ChannelTableViewCell.swift */; };
+		A8E9C8601EC9F20300DDA197 /* PinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E9C85F1EC9F20300DDA197 /* PinAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		A8E9C8581EC9D82400DDA197 /* Spot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Spot.swift; path = models/Spot.swift; sourceTree = "<group>"; };
 		A8E9C85A1EC9D8A300DDA197 /* Subtitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Subtitle.swift; path = models/Subtitle.swift; sourceTree = "<group>"; };
 		A8E9C85C1EC9E2F600DDA197 /* ChannelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChannelTableViewCell.swift; path = ui/ChannelTableViewCell.swift; sourceTree = "<group>"; };
+		A8E9C85F1EC9F20300DDA197 /* PinAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PinAnnotation.swift; path = common/PinAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		A8E9C8161EC9D10D00DDA197 /* Channels */ = {
 			isa = PBXGroup;
 			children = (
+				A8E9C85E1EC9F1D200DDA197 /* common */,
 				A8E9C8551EC9D76800DDA197 /* models */,
 				A8E9C84C1EC9D32900DDA197 /* ui */,
 				A8E9C8451EC9D27700DDA197 /* app */,
@@ -187,6 +190,14 @@
 				A8E9C85A1EC9D8A300DDA197 /* Subtitle.swift */,
 			);
 			name = models;
+			sourceTree = "<group>";
+		};
+		A8E9C85E1EC9F1D200DDA197 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				A8E9C85F1EC9F20300DDA197 /* PinAnnotation.swift */,
+			);
+			name = common;
 			sourceTree = "<group>";
 		};
 		D78E5C763642366B1A6B65EF /* Frameworks */ = {
@@ -383,6 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8E9C8601EC9F20300DDA197 /* PinAnnotation.swift in Sources */,
 				A8E9C8571EC9D7CB00DDA197 /* Channel.swift in Sources */,
 				A8E9C8541EC9D69600DDA197 /* AppDelegate.swift in Sources */,
 				A8E9C8521EC9D39800DDA197 /* ViewController.swift in Sources */,

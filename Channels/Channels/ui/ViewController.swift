@@ -18,14 +18,12 @@ class ViewController: BaseViewController, CLLocationManagerDelegate, MKMapViewDe
   var locationManager = CLLocationManager()
   var channelDataSource = [Channel]()
 
+  // MARK: - View Cycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     buildDataSource()
-    
-    mapView.delegate = self
-    mapView.showsUserLocation = true
   }
   
   override func didReceiveMemoryWarning() {
@@ -33,6 +31,7 @@ class ViewController: BaseViewController, CLLocationManagerDelegate, MKMapViewDe
     // Dispose of any resources that can be recreated.
   }
   
+  // MARK: - Private
   
   func buildDataSource() {
     let apiManager = AppDelegate.getDelegate().context.apiManager
@@ -82,8 +81,26 @@ class ViewController: BaseViewController, CLLocationManagerDelegate, MKMapViewDe
     }
   }
   
+  func removePins() {
+    self.mapView.annotations.forEach {
+      if !($0 is MKUserLocation) {
+        self.mapView.removeAnnotation($0)
+      }
+    }
+  }
+  
+  func displayPins(_ spot: Spot) {
+    let location = CLLocationCoordinate2DMake(CLLocationDegrees(spot.coordinates.0), CLLocationDegrees(spot.coordinates.1))
+    
+    mapView.setRegion(MKCoordinateRegionMakeWithDistance(location, AppConf.MapKit.defaultMeters, AppConf.MapKit.defaultMeters), animated: true)
+    
+    let pin = PinAnnotation(title: spot.title, subtitle: spot.information, coordinate: location)
+    mapView.addAnnotation(pin)
+  }
 
 }
+
+// MARK: - TableView Delegate, DataSource
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -101,7 +118,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let channel = channelDataSource[indexPath.item]
     
+    removePins()
+    for spot in channel.spots {
+      displayPins(spot)
+    }
   }
 }
 
