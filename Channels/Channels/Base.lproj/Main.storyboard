@@ -72,16 +72,24 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Jf5-aM-gmu"/>
                                 </connections>
                             </tableView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AKb-tq-Stn">
+                                <rect key="frame" x="220" y="0.0" width="447" height="375"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="AKb-tq-Stn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2vo-SO-8FZ"/>
                             <constraint firstItem="jbl-y1-vA9" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.33" id="7P7-Q2-Ggs"/>
+                            <constraint firstAttribute="trailing" secondItem="AKb-tq-Stn" secondAttribute="trailing" id="YID-0U-BmO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AKb-tq-Stn" secondAttribute="bottom" id="cY2-LA-FYu"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jbl-y1-vA9" secondAttribute="bottom" id="f3N-W5-50V"/>
                             <constraint firstItem="jbl-y1-vA9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gs3-0Q-05r"/>
                             <constraint firstItem="jbl-y1-vA9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="p8H-LD-ONz"/>
+                            <constraint firstItem="AKb-tq-Stn" firstAttribute="leading" secondItem="jbl-y1-vA9" secondAttribute="trailing" id="v2m-Zh-qVF"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="mapView" destination="AKb-tq-Stn" id="DJG-Im-6HE"/>
                         <outlet property="tableView" destination="jbl-y1-vA9" id="eoT-f4-6th"/>
                     </connections>
                 </viewController>

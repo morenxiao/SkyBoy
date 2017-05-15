@@ -7,25 +7,33 @@
 //
 
 import UIKit
+import MapKit
 import SwiftyJSON
 
-class ViewController: BaseViewController {
-
+class ViewController: BaseViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+  
   @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var mapView: MKMapView!
+  
+  var locationManager = CLLocationManager()
   var channelDataSource = [Channel]()
+
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     buildDataSource()
     
+    
+    mapView.delegate = self
+    mapView.showsUserLocation = true
   }
-
+  
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-
+  
   
   func buildDataSource() {
     let apiManager = AppDelegate.getDelegate().context.apiManager
@@ -74,6 +82,7 @@ class ViewController: BaseViewController {
       }
     }
   }
+  
 
 }
 
@@ -90,6 +99,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     cell.configure(channelDataSource[indexPath.item])
     
     return cell
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
   }
 }
 
