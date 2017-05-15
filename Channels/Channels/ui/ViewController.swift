@@ -24,7 +24,6 @@ class ViewController: BaseViewController, CLLocationManagerDelegate, MKMapViewDe
     
     buildDataSource()
     
-    
     mapView.delegate = self
     mapView.showsUserLocation = true
   }
