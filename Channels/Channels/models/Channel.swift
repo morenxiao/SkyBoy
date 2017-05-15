@@ -9,5 +9,5 @@
 struct Channel {
   var id: String
   var name: String
-  var spots: Spot
+  var spots = [Spot]()
 }

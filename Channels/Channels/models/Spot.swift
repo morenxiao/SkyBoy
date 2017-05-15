@@ -12,5 +12,5 @@ struct Spot {
   var information: String
   var videoUrl: String
   var coordinates: (Float, Float)
-  var subtitles: Subtitle
+  var subtitles = [Subtitle]()
 }

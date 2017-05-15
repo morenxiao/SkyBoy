@@ -22,6 +22,7 @@
 		A8E9C8571EC9D7CB00DDA197 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E9C8561EC9D7CB00DDA197 /* Channel.swift */; };
 		A8E9C8591EC9D82400DDA197 /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E9C8581EC9D82400DDA197 /* Spot.swift */; };
 		A8E9C85B1EC9D8A300DDA197 /* Subtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E9C85A1EC9D8A300DDA197 /* Subtitle.swift */; };
+		A8E9C85D1EC9E2F600DDA197 /* ChannelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E9C85C1EC9E2F600DDA197 /* ChannelTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		A8E9C8561EC9D7CB00DDA197 /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Channel.swift; path = models/Channel.swift; sourceTree = "<group>"; };
 		A8E9C8581EC9D82400DDA197 /* Spot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Spot.swift; path = models/Spot.swift; sourceTree = "<group>"; };
 		A8E9C85A1EC9D8A300DDA197 /* Subtitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Subtitle.swift; path = models/Subtitle.swift; sourceTree = "<group>"; };
+		A8E9C85C1EC9E2F600DDA197 /* ChannelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChannelTableViewCell.swift; path = ui/ChannelTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 			children = (
 				A8E9C8511EC9D39800DDA197 /* ViewController.swift */,
 				A8E9C84F1EC9D37B00DDA197 /* BaseViewController.swift */,
+				A8E9C85C1EC9E2F600DDA197 /* ChannelTableViewCell.swift */,
 			);
 			name = ui;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				A8E9C85B1EC9D8A300DDA197 /* Subtitle.swift in Sources */,
 				A8E9C8491EC9D2B600DDA197 /* Context.swift in Sources */,
 				A8E9C8501EC9D37B00DDA197 /* BaseViewController.swift in Sources */,
+				A8E9C85D1EC9E2F600DDA197 /* ChannelTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
